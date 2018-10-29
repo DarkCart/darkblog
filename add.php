@@ -16,8 +16,8 @@ if (isset($_GET["submit"])) {
 
 <?php
 include "options.php";
-if ($useBBCode) {
-echo "<b>BBCode Reference:</b><br>
+if (!$useBBCode) { exit(); } ?>
+<b>BBCode Reference:</b><br>
 [b]: Font style bold - [b]Hello world[/b]<br>
 [i]: Font style italic - [i]Hello world[/i]<br>
 [s]: Font style struck through - [s]Hello world[/s]<br>
@@ -34,6 +34,4 @@ echo "<b>BBCode Reference:</b><br>
 [left]: Text-align: left - [left]Hello world[/left]<br>
 [center]: Text-align: center - [center]Hello world[/center]<br>
 [right]: Text-align: right - [right]Hello world[/right]<br>
-[spoiler]: Spoiler (pure HTML code that needs JavaScript code to add behaviour) - [spoiler]Hello world[/spoiler]<br>";
-}
-?>
+[spoiler]: Spoiler (pure HTML code that needs JavaScript code to add behaviour) - [spoiler]Hello world[/spoiler]<br>
