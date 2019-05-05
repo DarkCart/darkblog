@@ -1,8 +1,4 @@
 <?php
-include "bbcode/BBCode.php";
-include "bbcode/Tag.php";
-include "options.php";
-$bbcode = new ChrisKonnertz\BBCode\BBCode();
 
 $postsdir = listdir_by_date("posts/");
 foreach ($postsdir as $i) {
